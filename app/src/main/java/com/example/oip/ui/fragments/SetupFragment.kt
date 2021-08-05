@@ -23,7 +23,7 @@ class SetupFragment : Fragment(R.layout.fragment_setup) {
     lateinit var sharedPref: SharedPreferences
 
     @set:Inject
-    private var isFirstAppOpened = true
+    var isFirstAppOpened = true
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -63,8 +63,8 @@ class SetupFragment : Fragment(R.layout.fragment_setup) {
             .putFloat(KEY_WEIGHT, weight.toFloat())
             .putBoolean(KEY_FIRST_TIME_TOGGLE, false)
             .apply()
-        val toolbarText = "Let'go, $name"
-        requireActivity().tvToolbarTitle.text = toolbarText
+        val toolbarText = "Let's go, $name"
+        //requireActivity().tvToolbarTitle.text = toolbarText
         return true
     }
 }
